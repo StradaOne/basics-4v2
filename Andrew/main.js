@@ -4,7 +4,7 @@ function calc(operation, a, b) {
       return 1 + 2;
     case "multi":
       return 1 * 2;
-    case "substract":
+    case "subtract":
       return 3 - 2;
   }
 }
