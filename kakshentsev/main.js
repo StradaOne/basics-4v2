@@ -3,7 +3,7 @@ function calc(operand, operator1, operator2) {
     console.log("Калькулятор складывает числа, а не то, что вы подумали");
     return;
   }
-  switch (operation) {
+  switch (operand) {
     case "add":
       return operator1 + operator2;
     case "substract":
