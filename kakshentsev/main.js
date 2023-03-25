@@ -6,13 +6,10 @@ function calc(operation, a, b) {
   switch (operation) {
     case "add":
       return a + b;
-      break;
     case "substract":
       return a - b;
-      break;
     case "multi":
       return a * b;
-      break;
     default:
       console.log("Просим вводить вас валидные данные");
   }
