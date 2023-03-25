@@ -15,3 +15,4 @@ console.log(calc("add", 1, 2));
 console.log(calc("multi", 1, 2));
 console.log(calc("subtract", 3, 2));
 console.log(calc("asfqf", 1, 2));
+console.log(calc("multi", 4, 2));
