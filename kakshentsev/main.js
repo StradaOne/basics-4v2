@@ -18,7 +18,7 @@ function calc(operation, a, b) {
   }
 }
 
-let result = calc("substract", 2, 5);
+let result = calc("substract", "2", 5);
 console.log(
   result ||
     "Используйте функцию только с этими операциями : add, substract, multi"
