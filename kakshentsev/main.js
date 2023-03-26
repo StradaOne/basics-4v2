@@ -1,3 +1,5 @@
+const illegalOperation = "Просим вводить вас валидные данные";
+
 function calc(operand, operator1, operator2) {
   if (typeof operator1 !== "number" || typeof operator2 !== "number") {
     console.log("Калькулятор складывает числа, а не то, что вы подумали");
@@ -11,7 +13,7 @@ function calc(operand, operator1, operator2) {
     case "multi":
       return operator1 * operator2;
     default:
-      console.log("Просим вводить вас валидные данные");
+      return illegalOperation;
   }
 }
 
