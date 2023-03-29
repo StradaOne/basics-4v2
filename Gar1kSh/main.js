@@ -26,7 +26,7 @@ phoneBook.ShowList();
 phoneBook.addList('Ben Larsson', 63627323);
 phoneBook.deleteList('Peter');
 
-// phoneBook.ShowList();
+phoneBook.ShowList();
 
 phoneBook.deleteList('Roman');
 
