@@ -4,21 +4,10 @@ const phoneBook = {
         "Gleb": 89151005678,
         "Oleg": 89151009012,
         "Ivan Ivanov": 89151003456
-    },
-    add(name, number) {
-        this.list[name] = number;
-    },
-    delete(name) {
-        delete this.list[name];
-    },
-    log() {
-        console.log(this.list);
     }
 };
 
-phoneBook.log();
-phoneBook.add("Ivan", 89151005689);
-phoneBook.log();
-phoneBook.delete("Gleb");
-phoneBook.log();
+for (name in phoneBook.list) {
+    console.log(name + '-' + phoneBook.list[name]);
+}
 
