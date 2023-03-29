@@ -12,6 +12,15 @@ const test = {
 };
 
 
-test.add('к3', 9876543212);
+test.add('к3', 987654322);
 test.del('к2');
-console.log(test.phoneBook);
+
+
+for (const name in test.phoneBook) {
+	console.log(name + ' | ' + test.phoneBook[name]);
+}
+
+
+// test.add('к3', 9876543212);
+// test.del('к2');
+// console.log(test.phoneBook);
