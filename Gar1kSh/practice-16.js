@@ -5,7 +5,7 @@ const phoneBook = {
   "Lena": 298202906,
   "Roman": 4504377018,
   },
-  showLog() {
+  ShowList() {
     console.log(this.list);
   }
 
@@ -13,28 +13,11 @@ const phoneBook = {
 
 console.log(phoneBook);
 
+phoneBook.list.Ann = 299919919;
+phoneBook.list.Vadim= 131313131;
+phoneBook.list["Natali Lopuhova"] = 3335698;
 
-// console.log(phoneBook.Vadim);
-// // console.log(phoneBook["Natali Lopuhova"]);
-// phoneBook["Ann"] = 375299919919;
-// // console.log(phoneBook.Ann);
-// delete phoneBook["Vadim"];
-// phoneBook["Vadim"] = 131313131;
-// phoneBook["Natali Lopuhova"] = 'not metadata';
-// // console.log(phoneBook["Natali Lopuhova"]);
+delete phoneBook.list.Lena;
 
+phoneBook.ShowList();
 
-// const phoneBook = {
-//   list: 
-//       { // перенесли все контакты в свойство list
-//         "John": 123456789,
-//         "Jane Doe": 987654321,
-//         "Jim Smith": 111111111
-//       },
-//   showLog() 
-//       { // добавили метод log
-//         console.log(this.list)
-//       }
-//   };
-
-// phoneBook.showLog(); // its a phonebook!
