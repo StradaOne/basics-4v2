@@ -38,9 +38,33 @@ const ToDoList = {
     this.list[name] = status;
   },
   ShowListTodo() {
-    console.log(this.list);
+    ShowListSort();
   },
 };
+
+function ShowListSort() {
+  let strProgressIn = "";
+  let strToDo = "";
+  let strDone = "";
+  for (const name in ToDoList.list) {
+    if (ToDoList.list[name] === progressTask) {
+      strProgressIn += name + "\n";
+    } else if (ToDoList.list[name] === toDoTask) {
+      strToDo += name + "\n";
+    } else if (ToDoList.list[name] === statusTask) {
+      strDone += name + "\n";
+    }
+  }
+  console.log("In progress:");
+  console.log(strProgressIn);
+  console.log("To Do:");
+  console.log(strToDo);
+  console.log("Done:");
+  console.log(strDone);
+  if (strDone === stringTask) {
+    console.log(nothingTask);
+  }
+}
 
 ToDoList.addTask();
 ToDoList.editTask("make a bed", progressTask);
