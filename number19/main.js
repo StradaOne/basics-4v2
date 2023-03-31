@@ -1,7 +1,7 @@
 const todoList = {
   list: {
     "go to the gym": "Done",
-    "Learn Engish": "To Do",
+    "Learn English": "To Do",
     "Home work": "In progress"
   },
   changeStatus(name, status) {
@@ -36,40 +36,25 @@ function showListfunc() {
   let strDone = '';
 
   for (const name in todoList.list) {
-    switch (todoList.list[name]) {
-      case "To Do":
-        strToDo += name + '\n';
-        break;
-      case "In progress":
-        strInProgress += name + '\n';
-        break;
-      case "Done":
-        strDone += name + '\n';
-        break;
-      default:
-        break;
+    if (todoList.list[name] === "To Do") {
+      strToDo +=name + ':' + todoList.list[name] + '\n';
+    } else if (todoList.list[name] === "Done") {
+      strDone += name + ':' + todoList.list[name] + '\n';
+    } else {
+      strInProgress +=name + ':' + todoList.list[name] + '\n';
     };
   };
-  if (strToDo === '') {
-    console.log('Nothing is To Do')
-  } else {
-    console.log("To Do:")
-    console.log(strToDo);
-  };
-  if (strInProgress === '') {
-    console.log('Nothing In progress')
-  } else {
-    console.log("In progress:")
-    console.log(strInProgress);
-  };
-  if (strDone === '') {
-    console.log('Nothing is Done')
-  } else {
-    console.log("Done:")
-    console.log(strDone);
-  };
+  console.log(strToDo);
+  console.log(strDone);
+  console.log(strInProgress);
 };
 
+
+
+todoList.deleteTask("Learn English");
+todoList.addTask("Walk white my frends", "To Do");
+todoList.changeStatus("Walk white my frends", "Done");
+todoList.changeStatus("Home work", "To Do");
 todoList.showList();
 
 
